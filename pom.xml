@@ -99,12 +99,14 @@
 		</dependency>
 		<dependency>
 		    <groupId>org.slf4j</groupId>
-		    <artifactId>slf4j-nop</artifactId>
+		    <artifactId>slf4j-api</artifactId>
 		    <version>1.7.26</version>
-		    <scope>test</scope>
 		</dependency>
-		
-		
+		<dependency>
+		    <groupId>org.slf4j</groupId>
+		    <artifactId>slf4j-log4j12</artifactId>
+		    <version>1.7.26</version>
+		</dependency>
 		
 		<!-- Spring5 与 Jdbc整合  -->
 		<!-- 整合JDBC需要用到的jar，当然再整合MyBatis框架也需要用到此处用到的jar -->

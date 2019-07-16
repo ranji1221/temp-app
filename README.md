@@ -6,14 +6,17 @@ Template Application Platform
 ---------------------------------------
 #### 核心技术
 * 前端技术：
- > (1) JSP<br>
- > (2) ThymeLeaF<br>
- > (3) JQuery<br>
+ > (1) JSP2<br>
+ > (2) ThymeLeaf3<br>
+ > (3) JQuery3<br>
+ > (4) BootStrap4<br>
+ > (5) EasyUI<br>
 * 后台技术：
  > (1) Spring MVC<br>
  > (2) Spring5<br>
- > (3) Spring JDBC<br>
- > (4) Druild数据库连接池<br>
+ > (3) Spring JDBCTemplate<br>
+ > (4) MyBatis3
+ > (5) Druild数据库连接池<br>
 ---------------------------------------
 #### 项目管理与版本控制
 * Maven3项目管理
@@ -24,7 +27,7 @@ Template Application Platform
 * MySQL5： 存储数据库
 * Tomcat： WEB应用容器
 ---------------------------------------
-#### 如何利用该平台开发
+#### 如何运行平台
 * 安装JDK1.8-64bit
  	>方案：配置相关环境变量JAVA_HOME CLASSPATH  PATH等
 * 安装Eclipse-JEE-neon3-64bit 
@@ -53,4 +56,18 @@ Template Application Platform
         ..............其他配置
     </profiles>
 ```
-
+* 下载该平台，并导入到Eclipse JEE中
+	> 下载可以采用Git克隆或者直接下载zip压缩包的方式
+	>（如何导入Maven项目的方式网上教程很多，这里不详述。）
+* 右击项目中的pom.xml文件
+	> 执行Run as -> Maven Build... -> clean install
+	> 该步骤会下载项目中所需要的jar包，故此必须网络要良好，否则请反复执行此步骤，直到Build Success!
+* 启动项目 
+	> 右击pom.xml
+	> 执行Run as -> Maven Build...
+	> Goals中输入tomcat7:run
+	> 默认8080端口，若没有其他应用占用该端口启动成功  
+* 访问应用
+	> 打开Google或360浏览器
+	> 访问前台：http://localhost:8080/uek
+	> 访问后台：http://localhost:8080/uek/admin
