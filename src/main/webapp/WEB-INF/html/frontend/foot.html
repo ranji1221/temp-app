@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="zh-cn"  xmlns:th="http://www.thymeleaf.org">
+	<head th:fragment="header">
+		<meta charset="utf-8">
+		<title>web footer</title>
+	</head>
+	<body>
+		<footer class="footer text-center"  th:fragment="footer">
+			<div class="container-fluid " >
+				<span class="text-dark">&copy;2010-2019</span>
+				<script type="text/javascript" src="/uek/assets/js/test.js" th:src="@{/assets/frontend/js/jquery-3.3.1.min.js}"></script>
+				<script type="text/javascript" src="/uek/assets/js/test.js" th:src="@{/assets/frontend/js/popper.min.js}"></script>
+				<script type="text/javascript" src="/uek/assets/js/test.js" th:src="@{/assets/frontend/js/bootstrap.min.js}"></script>
+			</div>
+		</footer>
+	</body>
+</html>

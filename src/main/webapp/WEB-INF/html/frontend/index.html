@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cn"  xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="~{html/frontend/head :: header}"></head>
+	<body>
+		<nav th:replace="~{html/frontend/head :: headnav}"></nav>
+		<div class="container" id="content">
+			<div class="row">
+				<!-- Main Content -->
+				<div class="col-md-8">
+					<!-- A Article -->
+					<div class="card mt-4">
+					  	<div class="card-body">
+					  		<h4 class="card-title"><a class="card-link text-dark" href="#" th:href="@{/u/ranji/blog/1}">John Doe</a></h4>
+						    <p class="card-text">
+						    		Some example text.I Like the Bootstrap Framework.Fowever, Many People Says the not good of the Bootstrap.
+						    		The benefits of using OAuth 2.0 authentication are obvious. You only need to use the same account password to access various websites without the cumbersome process of registering on each site. This article will introduce the principle of OAuth 2.0 and demonstrate the authentication process of OAuth 2.0 based on Spring Security and GitHub accounts.
+						    </p>
+						    <div class="card-text">
+						    	2019-05-01 By <a href="#"  th:href="@{/u/1}" class="card-link ">RanJi</a>
+						    	<span class="oi oi-eye text-primary" title="eye" aria-hidden="true" >5</span>
+						    	<span class="oi oi-heart text-danger" title="heart" aria-hidden="true" >10</span>
+						    	<span class="oi oi-comment-square text-success" title="comment" aria-hidden="true" >30</span>
+						    </div>
+					  	</div>
+					</div>
+					<!-- A Article -->
+					<div class="card mt-4">
+					  	<div class="card-body">
+					  		<h4 class="card-title"><a class="card-link text-dark" href="#">John Doe</a></h4>
+						    <p class="card-text">
+						    		Some example text.I Like the Bootstrap Framework.Fowever, Many People Says the not good of the Bootstrap.
+						    		The benefits of using OAuth 2.0 authentication are obvious. You only need to use the same account password to access various websites without the cumbersome process of registering on each site. This article will introduce the principle of OAuth 2.0 and demonstrate the authentication process of OAuth 2.0 based on Spring Security and GitHub accounts.
+						    </p>
+						     <div class="card-text">
+						    	2019-05-01 By <a href="#"  th:href="@{/u/1}" class="card-link ">RanJi</a>
+						    	<span class="oi oi-eye text-primary" title="eye" aria-hidden="true" >5</span>
+						    	<span class="oi oi-heart text-danger" title="heart" aria-hidden="true" >10</span>
+						    	<span class="oi oi-comment-square text-success" title="comment" aria-hidden="true" >30</span>
+						    </div>
+					  	</div>
+					</div>
+					<!-- A Article -->
+					<div class="card mt-4">
+					  	<div class="card-body">
+					  		<h4 class="card-title"><a class="card-link text-dark" href="#">John Doe</a></h4>
+						    <p class="card-text">
+						    		Some example text.I Like the Bootstrap Framework.Fowever, Many People Says the not good of the Bootstrap.
+						    		The benefits of using OAuth 2.0 authentication are obvious. You only need to use the same account password to access various websites without the cumbersome process of registering on each site. This article will introduce the principle of OAuth 2.0 and demonstrate the authentication process of OAuth 2.0 based on Spring Security and GitHub accounts.
+						    </p>
+						    <div class="card-text">
+						    	2019-05-01 By <a href="#" th:href="@{/u/1}" class="card-link ">RanJi</a>
+						    	<span class="oi oi-eye text-primary" title="eye" aria-hidden="true" >5</span>
+						    	<span class="oi oi-heart text-danger" title="heart" aria-hidden="true" >10</span>
+						    	<span class="oi oi-comment-square text-success" title="comment" aria-hidden="true" >30</span>
+						    </div>
+					  	</div>
+					</div>
+					<!-- Pagination -->
+					<nav aria-label="Page navigation">
+						<ul class="pagination justify-content-center mt-4">
+						    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+						    <li class="page-item"><a class="page-link" href="#">1</a></li>
+						    <li class="page-item"><a class="page-link" href="#">2</a></li>
+						    <li class="page-item"><a class="page-link" href="#">3</a></li>
+						    <li class="page-item"><a class="page-link" href="#">4</a></li>
+						    <li class="page-item"><a class="page-link" href="#">5</a></li>
+						    <li class="page-item"><a class="page-link" href="#">6</a></li>
+						    <li class="page-item"><a class="page-link" href="#">7</a></li>
+						    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+						  </ul>
+					  </nav>
+				</div>
+				<!-- Aside  Section-->
+				<aside class="col-md-4">
+					<div class="p-3 mb-3  mt-4 bg-light rounded">
+				        <h4 class="font-italic">Hot Tags</h4>
+				        	<p class="mb-0">
+				        		<a href="/blogs?tag=1"> <span class="badge badge-primary">Core Java</span></a>
+				        		<a href="/blogs?tag=1"> <span class="badge badge-primary">Spring MVC</span></a>
+				        		<a href="/blogs?tag=1"> <span class="badge badge-primary">Spring5</span></a>
+				        		<a href="/blogs?tag=1"> <span class="badge badge-primary">MyBatis3</span></a>
+				        		<a href="/blogs?tag=1"> <span class="badge badge-primary">Servlet And JSP</span></a>
+				        		<a href="/blogs?tag=1"> <span class="badge badge-primary">Spring Boot2.0</span></a>
+				        		<a href="/blogs?tag=1"> <span class="badge badge-primary">Hadoop2.0</span></a>
+				        		<a href="/blogs?tag=1"> <span class="badge badge-primary">Hadoop2.0</span></a>
+				        		<a href="/blogs?tag=1"> <span class="badge badge-primary">Hadoop2.0</span></a>
+				        		<a href="/blogs?tag=1"> <span class="badge badge-primary">Hadoop2.0</span></a>
+				        		<a href="/blogs?tag=1"> <span class="badge badge-primary">Hadoop2.0</span></a>
+				        	</p>
+				      </div>
+				      <div class="p-3">
+				        <h4 class="font-italic">Archives</h4>
+				        <ol class="list-unstyled mb-0">
+				          <li><a href="#">March 2014</a></li>
+				          <li><a href="#">February 2014</a></li>
+				          <li><a href="#">January 2014</a></li>
+				          <li><a href="#">December 2013</a></li>
+				          <li><a href="#">November 2013</a></li>
+				          <li><a href="#">October 2013</a></li>
+				          <li><a href="#">September 2013</a></li>
+				          <li><a href="#">August 2013</a></li>
+				          <li><a href="#">July 2013</a></li>
+				          <li><a href="#">June 2013</a></li>
+				          <li><a href="#">May 2013</a></li>
+				          <li><a href="#">April 2013</a></li>
+				        </ol>
+				      </div>
+				</aside>
+			</div><!-- row end -->
+		</div><!-- container end -->
+		<div th:replace="~{html/frontend/foot :: footer}"></div>
+	</body>
+</html>

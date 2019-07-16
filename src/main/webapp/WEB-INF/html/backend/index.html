@@ -1,65 +1,99 @@
 <!DOCTYPE html>
 <html lang="zh-cn"  xmlns:th="http://www.thymeleaf.org">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-		<title>Lemon Cloud</title>
-		<link rel="shortcut icon" href="#" th:href="@{/assets/image/favicon.ico}">
-		<link rel="stylesheet" href="../layui/css/layui.css" th:href="@{/assets/backend/css/layui.css}">
-	</head>
-<body class="layui-layout-body">
-	<div class="layui-layout layui-layout-admin">
-		<!-- Header Navigation Section -->
-		<div class="layui-header layui-bg-cyan">
-			<div class="layui-logo" style="color:white">
-				Lemon Cloud
-			</div>
-			<ul class="layui-nav layui-layout-left">
-				<li class="layui-nav-item"><a href="#">控制台</a></li>
-				<li class="layui-nav-item"><a href="#">博文管理</a></li>
-				<li class="layui-nav-item"><a href="#">标签管理</a></li>
-			
-			</ul>
-			<ul class="layui-nav layui-layout-right">
-				<li class="layui-nav-item">
-					<a href="javascript:;">
-						<img src="" th:src="@{/assets/image/ranji.jpg}" class="layui-nav-img">
-						泥鳅也是鱼
-					</a>
-					<dl class="layui-nav-child">
-						<dd><a href="#">个人中心</a></dd>
-						<dd><a href="#">修改密码</a></dd>
-					</dl>
-				</li>
-				<li class="layui-nav-item"><a href="#">退出</a></li>
-			</ul>
-		</div>
-		<!-- Header Navigation Section -->
-		<!-- Left Navigation Section -->
-		<div class="layui-side layui-bg-cyan">
-			<div class="layui-side-scroll">
-				<ul class="layui-nav layui-nav-tree">
-					<li class="layui-nav-item">
-						<a href="javascript:;">博文管理</a>
-						<dl class="layui-nav-child">
-							<dd><a href="#">列表一</a></dd>
-							<dd><a href="#">列表二</a></dd>
-							<dd><a href="#">列表三</a></dd>
-							<dd><a href="#">列表四</a></dd>
-						</dl>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<!-- Left Navigation Section -->
+<head>
+	<meta charset="UTF-8">
+	<title>Backend Layout</title>
+	<link rel="stylesheet" type="text/css" href="themes/gray/easyui.css" th:href="@{/assets/backend/themes/gray/easyui.css}">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css" th:href="@{/assets/backend/themes/icon.css}">
+	<script type="text/javascript" src="js/jquery.min.js" th:src="@{/assets/backend/js/jquery.min.js}"></script>
+	<script type="text/javascript" src="js/jquery.easyui.min.js" th:src="@{assets/backend/js/jquery.easyui.min.js}"></script>
+</head>
+<body class="easyui-layout">
+	<!-- Header Zone -->
+	<div data-options="region:'north',height:38">
+		Lemon Cloud云平台
 	</div>
-	<script type="text/javascript" src="../layui/layui.js"  th:src="@{/assets/backend/layui.js}"></script>
+	<!-- Left Menu Zone -->
+	<div data-options="region:'west',width:152" title="Navigation">
+		<div id="sm"></div>
+	</div>
+	<!-- Content Zone -->
+	<div data-options="region:'center'" id="tt" class="easyui-tabs" fit="true">
+		<div title="home"></div>
+	</div>
+	<!-- JS Script -->
 	<script type="text/javascript">
-		layui.use(['layer','form','element'],function(){
-			var layer = layui.layer, 
-			form = layui.form,
-			element = layui.element;
-			layer.msg('Hello World');
+		//-- 1. 左菜单，根据实际需要进行添加
+		var data = [{
+			text: '分类管理',
+			iconCls: 'icon-classify',
+			state: 'open',
+			children:[{
+				text: 'View Users'
+			},{
+				text: 'Operate User'
+			}]
+		},{
+	        text: '文章管理',
+	        iconCls: 'icon-article',
+	        children: [{
+	            text: 'Option4'
+	        },{
+	            text: 'Option5'
+	        },{
+	            text: 'Option6'
+	        }]
+	    },{
+	        text: '系统设置',
+	        iconCls: 'icon-settings',
+	        children: [{
+	            text: 'Option4'
+	        },{
+	            text: 'Option5'
+	        },{
+	            text: 'Option6'
+	        }]
+	    }];
+		
+		//-- 2. 动态添加选项卡
+		function addTab(title, url){
+			if ($('#tt').tabs('exists', title)){
+				$('#tt').tabs('select', title);
+			} else {
+				var content = '<iframe scrolling="auto" frameborder="0"  src="'+url+'" style="width:100%;height:100%;"></iframe>';
+				$('#tt').tabs('add',{
+					title:title,
+					content:content,
+					closable:true
+				});
+			}
+		}
+		
+		//-- 3. 根据左菜单中itemId获取相对应的url
+		function getUrl(itemId){
+			var url = '';
+			switch(itemId){
+				case '_easyui_sidemenu_2': url='http://localhost:8080/uek/test';break;
+				case '_easyui_sidemenu_3': url='bbb';break;
+				case '_easyui_sidemenu_5': url='ccc';break;
+				case '_easyui_sidemenu_6': url='ddd';break;
+				case '_easyui_sidemenu_7': url='eee';break;
+				case '_easyui_sidemenu_9': url='fff';break;
+				case '_easyui_sidemenu_10': url='ggg';break;
+				case '_easyui_sidemenu_11': url='hhh';break;
+			}
+			return url;
+		}
+		
+		//-- 3. 加载
+		$(function(){
+			$('#sm').sidemenu({
+				data: data,
+				width: 150,
+				onSelect: function(item){
+					addTab(item.text,getUrl(item.id));
+				}
+			});
 		});
 	</script>
 </body>

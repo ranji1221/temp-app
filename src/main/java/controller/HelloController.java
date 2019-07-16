@@ -46,26 +46,26 @@ public class HelloController {
 	
 	@RequestMapping("/index")
 	public String index(){
-		return "html/index";
+		return "html/frontend/index";
 	}
 	
 	@RequestMapping("/u/{id}")		//-- 用户个人中心
 	public String personal(@PathVariable("id")int id){
-		return "html/personal";
+		return "html/frontend/personal";
 	}
 	
 	@RequestMapping("/u/{username}/blog/{id}")
 	public String blog(@PathVariable("username")String username,@PathVariable("id")int id){
-		return "html/blog";
+		return "html/frontend/blog";
 	}
 	
 	@RequestMapping("/blog/edit")
 	public String editBlog(){
-		return "html/edit";
+		return "html/frontend/edit";
 	}
 	@RequestMapping("/tologin")
 	public String tologin(){
-		return "html/login";
+		return "html/frontend/login";
 	}
 	
 	@RequestMapping("/admin")

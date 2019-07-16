@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-cn"  xmlns:th="http://www.thymeleaf.org">
+	<head th:replace="~{html/frontend/head :: header}"></head>
+	<body>
+		<!-- Import Header Section -->
+		<nav th:replace="~{html/frontend/head :: headnav}"></nav>
+		<div class="container">
+			<div class="row">
+				<!-- Left Category Section-->
+				<div class="col-md-4 col-xl-3">
+					<!-- Personal Info -->
+					<div class="card mt-4">
+					  <img class="card-img-top" src="/uek/assets/frontend/image/ranji.jpg" alt="Card image cap">
+					  <div class="card-body">
+					    <h5 class="card-title">Card title</h5>
+					    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+					    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+					  </div>
+					</div>
+					<!-- Category Info -->
+					<div class="card border-light mt-4">
+						<div class="card-header">
+							<span class="oi oi-menu" title="menu" aria-hidden="true"></span>
+							Category
+						</div>
+						<ul class="list-group">
+									<li class="list-group-item"><a href="#" class="card-link">SpringMVC's Basic Course For Developer<span class="badge badge-warning badge-pill ml-2">10</span></a></li>
+									<li class="list-group-item"><a href="#" class="card-link">How's Use MySQL For Java Developer<span class="badge badge-warning badge-pill ml-2">20</span></a></li>
+									<li class="list-group-item"><a href="#" class="card-link">Study Security Framework Follow Me.<span class="badge badge-warning badge-pill ml-2">15</span></a></li>
+									<li class="list-group-item"><a href="#" class="card-link">Cookie And Session By Servlet3.0.<span class="badge badge-warning badge-pill ml-2">12</span></a></li>
+									<li class="list-group-item"><a href="#" class="card-link">BootStrap And JQuery By RanJi.<span class="badge badge-warning badge-pill ml-2">8</span></a></li>
+						</ul>
+					</div>
+				</div>
+				
+				<!-- Right Category Section-->
+				<div class="col-md-8 col-xl-9">
+						<!-- Tabs Panel -->
+						<ul class="nav nav-tabs mt-4">
+							<li class="nav-item"><a class="nav-link active" href="#">News</a></li>
+							<li class="nav-item"><a class="nav-link" href="#">Hots</a></li>
+							<li class="nav-item">
+								<form class="form-inline mt-2 mt-md-0">
+							      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+							      <button class="btn btn-info text-light" type="submit"><span class="oi oi-magnifying-glass" title="search" aria-hidden="true" ></span></button>
+							    </form>
+							</li>
+						</ul>
+						<!-- Article List -->
+						<!-- A Article -->
+						<div class="card mt-4">
+						  	<div class="card-body">
+						  		<h4 class="card-title"><a class="card-link text-dark" href="#">John Doe</a></h4>
+							    <p class="card-text">
+							    		Some example text.I Like the Bootstrap Framework.Fowever, Many People Says the not good of the Bootstrap.
+							    		The benefits of using OAuth 2.0 authentication are obvious. You only need to use the same account password to access various websites without the cumbersome process of registering on each site. This article will introduce the principle of OAuth 2.0 and demonstrate the authentication process of OAuth 2.0 based on Spring Security and GitHub accounts.
+							    </p>
+							     <div class="card-text">
+							    	2019-05-01
+							    	<span class="oi oi-eye text-primary" title="eye" aria-hidden="true" >5</span>
+							    	<span class="oi oi-heart text-danger" title="heart" aria-hidden="true" >10</span>
+							    	<span class="oi oi-comment-square text-success" title="comment" aria-hidden="true" >30</span>
+							    </div>
+						  	</div>
+						</div>
+						<!-- A Article -->
+						<div class="card mt-4">
+						  	<div class="card-body">
+						  		<h4 class="card-title"><a class="card-link text-dark" href="#">John Doe</a></h4>
+							    <p class="card-text">
+							    		Some example text.I Like the Bootstrap Framework.Fowever, Many People Says the not good of the Bootstrap.
+							    		The benefits of using OAuth 2.0 authentication are obvious. You only need to use the same account password to access various websites without the cumbersome process of registering on each site. This article will introduce the principle of OAuth 2.0 and demonstrate the authentication process of OAuth 2.0 based on Spring Security and GitHub accounts.
+							    </p>
+							    <div class="card-text">
+							    	2019-05-01
+							    	<span class="oi oi-eye text-primary" title="eye" aria-hidden="true" >5</span>
+							    	<span class="oi oi-heart text-danger" title="heart" aria-hidden="true" >10</span>
+							    	<span class="oi oi-comment-square text-success" title="comment" aria-hidden="true" >30</span>
+							    </div>
+						  	</div>
+						</div>
+						<!-- A Article -->
+						<div class="card mt-4">
+						  	<div class="card-body">
+						  		<h4 class="card-title"><a class="card-link text-dark" href="#">John Doe</a></h4>
+							    <p class="card-text">
+							    		Some example text.I Like the Bootstrap Framework.Fowever, Many People Says the not good of the Bootstrap.
+							    		The benefits of using OAuth 2.0 authentication are obvious. You only need to use the same account password to access various websites without the cumbersome process of registering on each site. This article will introduce the principle of OAuth 2.0 and demonstrate the authentication process of OAuth 2.0 based on Spring Security and GitHub accounts.
+							    </p>
+							    <div class="card-text">
+							    	2019-05-01
+							    	<span class="oi oi-eye text-primary" title="eye" aria-hidden="true" >5</span>
+							    	<span class="oi oi-heart text-danger" title="heart" aria-hidden="true" >10</span>
+							    	<span class="oi oi-comment-square text-success" title="comment" aria-hidden="true" >30</span>
+							    </div>
+						  	</div>
+						</div>
+						<!-- Pagination -->
+						<nav aria-label="Page navigation">
+							<ul class="pagination justify-content-center mt-4">
+							    <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+							    <li class="page-item"><a class="page-link" href="#">1</a></li>
+							    <li class="page-item"><a class="page-link" href="#">2</a></li>
+							    <li class="page-item"><a class="page-link" href="#">3</a></li>
+							    <li class="page-item"><a class="page-link" href="#">4</a></li>
+							    <li class="page-item"><a class="page-link" href="#">5</a></li>
+							    <li class="page-item"><a class="page-link" href="#">Next</a></li>
+							  </ul>
+						  </nav>
+				</div>
+			</div><!-- row end -->
+		</div><!-- container end -->
+		<!-- Import Footer Section -->
+		<div th:replace="~{html/frontend/foot :: footer}"></div>
+	</body>
+</html>
