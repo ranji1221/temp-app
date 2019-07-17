@@ -33,9 +33,11 @@ public class UserServiceDaoImpl implements IUserService{
 		u.setPwd("123456");
 		userMapper.save(u);
 		
-		//-- construtor exception
-		int i=3/0;
 		//-- throw new RuntimeException();
+		boolean flag = true;
+		if(flag){
+			throw new RuntimeException();
+		}
 		
 		//-- Step 2
 		userMapper.deleteUser(10);
