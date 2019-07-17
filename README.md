@@ -15,7 +15,7 @@ Template Application Platform
  > (1) Spring MVC<br>
  > (2) Spring5<br>
  > (3) Spring JDBCTemplate<br>
- > (4) MyBatis3
+ > (4) MyBatis3<br>
  > (5) Druild数据库连接池<br>
 ---------------------------------------
 #### 项目管理与版本控制
