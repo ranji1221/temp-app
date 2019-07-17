@@ -10,4 +10,13 @@ PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
         <!-- 开启驼峰命名转换 -->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
     </settings>
+    <plugins>
+	    <!-- MyBatis PageHelper拦截器 -->
+	    <plugin interceptor="com.github.pagehelper.PageInterceptor">
+	        <!-- 使用下面的方式配置参数，后面会有所有的参数介绍 -->
+	        <property name="helperDialect" value="mysql"/>
+	        <!-- 分页参数合理化 -->
+	        <property name="reasonable" value="true"/>
+		</plugin>
+	</plugins>
 </configuration>

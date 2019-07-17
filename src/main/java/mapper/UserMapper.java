@@ -1,6 +1,9 @@
 package mapper;
 
+import java.util.List;
+
 import org.apache.ibatis.annotations.Select;
+
 import entity.User;
 
 /**
@@ -14,4 +17,7 @@ public interface UserMapper {
 	void deleteUser(int id);
 	@Select("select * from t_user where id=#{id}")
 	User findUser(int id);
+	
+	@Select("select * from t_user")
+	List<User> findAll(); 
 }

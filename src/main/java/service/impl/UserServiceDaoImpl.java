@@ -1,8 +1,12 @@
 package service.impl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import com.github.pagehelper.PageHelper;
 
 import entity.User;
 import mapper.UserMapper;
@@ -35,6 +39,13 @@ public class UserServiceDaoImpl implements IUserService{
 		
 		//-- Step 2
 		userMapper.deleteUser(10);
+	}
+
+	@Override
+	public List<User> findUsers(int pageNum, int pageSize) {
+		PageHelper.startPage(pageNum, pageSize);
+		List<User> users = userMapper.findAll();
+		return users;
 	}
 
 }
